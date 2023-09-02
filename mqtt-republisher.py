@@ -21,7 +21,7 @@ def on_connect(client, userdata, flags, rc):
     for topic in topics:
         print("Subscribing to topic: " + topic)
         client.subscribe(topic, qos)
-    #client.subscribe([("dsmr/reading/electricity_delivered", 0), ("dsmr/reading/electricity_returned", 0)])
+
 def on_message(client, userdata, msg):
     new_topic = msg.topic + new_topic_suffix
     if debug:
